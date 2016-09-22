@@ -8,7 +8,7 @@ master_df = pd.DataFrame()
 #create a function to grab the names on a page
 def getnames(url, df):
     html = urllib.urlopen(url).read()
-    soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html, 'html.parser', from_encoding="utf-8")
     names = [] #set an empty list to fill with the names
     realm = [] #sent an empty list to till the realms
     for user in soup.findAll('i', {'class': 'show-for-small-down-custom'}):

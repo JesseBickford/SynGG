@@ -7,7 +7,7 @@ data.dropna(inplace=True) #drop missing values
 data = data[data.Realm.str.contains("JP") == False]    #for some reason the riot api thinks "jp" isn't a region
 
 def getid():
-    riotapi.set_api_key("RGAPI-1974219A-1DD3-4D8E-8035-D4A89C9A75DA")
+    riotapi.set_api_key("Your Key Here")
     idlist = []
     for realm, name in zip(data.Realm, data.Names):
         try:
